@@ -3,7 +3,7 @@
 #output: G, the generator matrix of the (2^r-1,2^r-r-1) Hamming code
 def hammingGeneratorMatrix(r):
     n = 2**r-1
-
+    
     #construct permutation pi
     pi = []
     for i in range(r):
@@ -32,7 +32,7 @@ def hammingGeneratorMatrix(r):
     for i in range(n):
         G.append(GG[rho[i]])
 
-    #transpose
+    #transpose    
     G = [list(i) for i in zip(*G)]
 
     return G
@@ -41,37 +41,9 @@ def hammingGeneratorMatrix(r):
 #function decimalToVector
 #input: numbers n and r (0 <= n<2**r)
 #output: a string v of r bits representing n
-def decimalToVector(n,r):
+def decimalToVector(n,r): 
     v = []
     for s in range(r):
         v.insert(0,n%2)
         n //= 2
     return v
-
-
-
-
-def message(a):
-    return
-
-def hammingEncoder(m):
-    return
-
-def hammingDecoder(v):
-    return
-
-def messageFromCodeword(c):
-    return
-
-def dataFromMessage(m):
-    return
-
-
-
-
-
-def repetitionEncoder(m,n):
-    return
-
-def repetitionDecoder(v):
-    return
