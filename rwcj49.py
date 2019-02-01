@@ -1,6 +1,9 @@
+import numpy as np
 #function HammingG
 #input: a number r
 #output: G, the generator matrix of the (2^r-1,2^r-r-1) Hamming code
+
+
 def hammingGeneratorMatrix(r):
     n = 2**r-1
 
@@ -49,10 +52,19 @@ def decimalToVector(n,r):
     return v
 
 
-
+# a = [0,1,1,0,1]
 
 def message(a):
-    return []
+    l = len(a)
+    for i in range(2,100):
+        if 2**i - 2*i -1 >= l:
+            r = i
+            break
+    k = 2**r - r - 1
+    out = decimalToVector(l, r)
+    out.extend(a)
+    out.extend(np.zeros(k-len(out),dtype=int))
+    return out
 
 def hammingEncoder(m):
     return []
@@ -64,14 +76,36 @@ def messageFromCodeword(c):
     return []
 
 def dataFromMessage(m):
-    return []
-
-
-
+    k = len(m)
+    origM = list(m)
+    for i in range(2,100):
+        if 2**i - i -1 >= k:
+            r = i
+            break
+    while m[-1] == 0:
+            m.pop()
+    l = int(''.join(str(e) for e in m[:r]),2)
+    n = origM[r:r+l]
+    return n
 
 
 def repetitionEncoder(m,n):
-    return []
+    out = []
+    for i in range(0,n):
+        out.extend(m)
+    return out
 
 def repetitionDecoder(v):
-    return []
+    ones = 0
+    zeroes = 0
+    for i in range(0,len(v)):
+        if v[i] == 1:
+            ones += 1
+        elif v[i] == 0:
+            zeroes += 1
+    if ones > zeroes:
+        return [1]
+    elif zeroes > ones:
+        return [0]
+    else:
+        return []
