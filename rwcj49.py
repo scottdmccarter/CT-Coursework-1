@@ -52,26 +52,26 @@ def decimalToVector(n,r):
 
 
 def message(a):
-    return
+    return []
 
 def hammingEncoder(m):
-    return
+    return []
 
 def hammingDecoder(v):
-    return
+    return []
 
 def messageFromCodeword(c):
-    return
+    return []
 
 def dataFromMessage(m):
-    return
+    return []
 
 
 
 
 
 def repetitionEncoder(m,n):
-    return
+    return []
 
 def repetitionDecoder(v):
-    return
+    return []
