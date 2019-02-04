@@ -67,7 +67,16 @@ def message(a):
     return out
 
 def hammingEncoder(m):
-    return []
+    k = len(m)
+    for i in range(2,100):
+        if 2**i - i -1 >= k:
+            r = i
+            break
+    g = hammingGeneratorMatrix(r)
+    if k != len(g):
+        return []
+    encoded = list(np.mod(np.matmul(m, g),2))
+    return encoded
 
 def hammingDecoder(v):
     return []
@@ -77,13 +86,10 @@ def messageFromCodeword(c):
 
 def dataFromMessage(m):
     k = len(m)
-    # origM = list(m)
     for i in range(2,100):
         if 2**i - i -1 >= k:
             r = i
             break
-    # while m[-1] == 0:
-    #         m.pop()
     l = int(''.join(str(e) for e in m[:r]),2)
     if r+l > k:
         return []

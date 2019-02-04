@@ -26,9 +26,9 @@ Part 1. hammingEncoder(m)
 
 1.0.
 Input:		[0]
-Output:		[] 
+Output:		[0, 0, 0] 
 Solution:	[0, 0, 0] 
-Outcome:	NO
+Outcome:	ok
 
 1.1.
 Input:		[0, 0, 0]
@@ -36,7 +36,7 @@ Output:		[]
 Solution:	[] 
 Outcome:	ok
 
-Part 1: 0 marks
+Part 1: 10 marks
 
 
  
@@ -129,4 +129,4 @@ Outcome:	ok
 Part 6: 10 marks
 
 
-TOTAL = 50 MARKS
+TOTAL = 60 MARKS
