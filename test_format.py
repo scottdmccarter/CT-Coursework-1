@@ -7,7 +7,7 @@
 
 from rwcj49 import *
 
-# 3. Run this file (you can simply double-cick on it in the file explorer)
+# 3. Run this file (you can simply double-click on it in the file explorer)
 # It should produce a text file called test.txt
 #
 # Advice:

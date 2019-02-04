@@ -77,15 +77,17 @@ def messageFromCodeword(c):
 
 def dataFromMessage(m):
     k = len(m)
-    origM = list(m)
+    # origM = list(m)
     for i in range(2,100):
         if 2**i - i -1 >= k:
             r = i
             break
-    while m[-1] == 0:
-            m.pop()
+    # while m[-1] == 0:
+    #         m.pop()
     l = int(''.join(str(e) for e in m[:r]),2)
-    n = origM[r:r+l]
+    if r+l > k:
+        return []
+    n = m[r:r+l]
     return n
 
 

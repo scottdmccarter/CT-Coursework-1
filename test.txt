@@ -86,11 +86,11 @@ Outcome:	ok
 
 4.1.
 Input:		[1, 1, 1, 1]
-Output:		[1] 
+Output:		[] 
 Solution:	[] 
-Outcome:	NO
+Outcome:	ok
 
-Part 4: 0 marks
+Part 4: 20 marks
 
 
  
@@ -129,4 +129,4 @@ Outcome:	ok
 Part 6: 10 marks
 
 
-TOTAL = 30 MARKS
+TOTAL = 50 MARKS
