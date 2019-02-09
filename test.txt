@@ -44,17 +44,17 @@ Part 2. hammingDecoder(v)
 
 2.0.
 Input:		[1, 1, 0]
-Output:		[] 
+Output:		[1, 1, 1] 
 Solution:	[1, 1, 1] 
-Outcome:	NO
+Outcome:	ok
 
 2.1.
 Input:		[1, 0, 0, 0, 0, 0, 0]
-Output:		[] 
+Output:		[0, 0, 0, 0, 0, 0, 0] 
 Solution:	[0, 0, 0, 0, 0, 0, 0] 
-Outcome:	NO
+Outcome:	ok
 
-Part 2: 0 marks
+Part 2: 30 marks
 
 
  
@@ -62,9 +62,9 @@ Part 3. messageFromCodeword(c)
 
 3.0.
 Input:		[1, 1, 1, 1, 1, 1, 1]
-Output:		[] 
+Output:		[1, 1, 1, 1] 
 Solution:	[1, 1, 1, 1] 
-Outcome:	NO
+Outcome:	ok
 
 3.1.
 Input:		[0, 0, 0, 0]
@@ -72,7 +72,7 @@ Output:		[]
 Solution:	[] 
 Outcome:	ok
 
-Part 3: 0 marks
+Part 3: 10 marks
 
 
  
@@ -129,4 +129,4 @@ Outcome:	ok
 Part 6: 10 marks
 
 
-TOTAL = 60 MARKS
+TOTAL = 100 MARKS

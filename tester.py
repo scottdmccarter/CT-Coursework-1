@@ -9,19 +9,19 @@ def testAll():
     assert( rwcj49.hammingEncoder([1,0,0,0])  ==  [1,1,1,0,0,0,0] )
     assert( rwcj49.hammingEncoder([0])        ==  [0,0,0] )
     assert( rwcj49.hammingEncoder([0,0,0])    ==  [] )
-    #
-    # assert( rwcj49.hammingDecoder([1,0,1,1])        ==  [])
-    # assert( rwcj49.hammingDecoder([0,1,1,0,0,0,0])  ==  [1,1,1,0,0,0,0] )
-    # assert( rwcj49.hammingDecoder([1,0,0,0,0,0,1])  ==  [1,0,0,0,0,1,1] )
-    # assert( rwcj49.hammingDecoder([1,1,0])          ==  [1,1,1])
-    # assert( rwcj49.hammingDecoder([1,0,0,0,0,0,0])  ==  [0,0,0,0,0,0,0] )
-    #
-    # assert( rwcj49.messageFromCodeword([1,0,1,1])        ==  [] )
-    # assert( rwcj49.messageFromCodeword([1,1,1,0,0,0,0])  ==  [1,0,0,0] )
-    # assert( rwcj49.messageFromCodeword([1,0,0,0,0,1,1])  ==  [0,0,1,1] )
-    # assert( rwcj49.messageFromCodeword([1,1,1,1,1,1,1])  ==  [1,1,1,1] )
-    # assert( rwcj49.messageFromCodeword([0,0,0,0])        ==  [] )
-    #
+
+    assert( rwcj49.hammingDecoder([1,0,1,1])        ==  [])
+    assert( rwcj49.hammingDecoder([0,1,1,0,0,0,0])  ==  [1,1,1,0,0,0,0] )
+    assert( rwcj49.hammingDecoder([1,0,0,0,0,0,1])  ==  [1,0,0,0,0,1,1] )
+    assert( rwcj49.hammingDecoder([1,1,0])          ==  [1,1,1])
+    assert( rwcj49.hammingDecoder([1,0,0,0,0,0,0])  ==  [0,0,0,0,0,0,0] )
+
+    assert( rwcj49.messageFromCodeword([1,0,1,1])        ==  [] )
+    assert( rwcj49.messageFromCodeword([1,1,1,0,0,0,0])  ==  [1,0,0,0] )
+    assert( rwcj49.messageFromCodeword([1,0,0,0,0,1,1])  ==  [0,0,1,1] )
+    assert( rwcj49.messageFromCodeword([1,1,1,1,1,1,1])  ==  [1,1,1,1] )
+    assert( rwcj49.messageFromCodeword([0,0,0,0])        ==  [] )
+
     assert( rwcj49.dataFromMessage([1,0,0,1,0,1,1,0,1,0])    ==  [] )
     assert( rwcj49.dataFromMessage([1,1,1,1,0,1,1,0,1,0,0])  ==  [] )
     assert( rwcj49.dataFromMessage([0,1,0,1,0,1,1,0,1,0,0])  ==  [0,1,1,0,1] )
